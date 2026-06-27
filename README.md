@@ -1,22 +1,28 @@
-# MAFR-UNet
+## MAFR-UNet
+
+Official PyTorch implementation of the paper "MAFR-UNet: Multi-scale Adaptive Feature Reassembly network for aortic CTA segmentation".
 
 ### Environment
-
->python=3.8.20  pytorch=1.3.1 CUDA=11.7 RandomSeed=42
->
 
 Please prepare an environment with python=3.8.20, and then use the command `pip install -r requirements.txt` for the dependencies.
 
 ### Prepare data
 
-Please click the following link to obtain the experimental dataset. Then, use the data_preprocess.py file in the utils folder to perform data preprocessing.
+Please download the datasets from the following links:
 
 AVT - https://doi.org/10.6084/m9.figshare.14806362.
 
-Synapse - https://drive.google.com/drive/folders/1ACJEoTp-uqfFJ73qS3eUObQh52nGuzCd. 
+Synapse - https://doi.org/10.6084/m9.figshare.31324045. 
 
-ACDC - https://drive.google.com/drive/folders/1KQcrci7aKsYZi1hQoZ3T3QUtcy7b--n4.
+ACDC - https://doi.org/10.6084/m9.figshare.31324297.
 
+Among them, the AVT dataset requires preprocessing using the preprocessing scripts provided in the `datasets` folder before training and evaluation.
+
+### Download pre-trained weights
+
+Please click the following link to obtain the pre-trained weights and store them in the `pretrained_ckpt` folder.
+
+https://drive.google.com/drive/folders/18NNUdd2g6SzMKd_KZqZIXepZzzYR5Usb?usp=drive_link
 ### Train/Test
 
 Please adjust the data storage addresses in run_train.sh and run_test.sh, and then execute `sh run_train.sh` and `sh run_test.sh` in sequence to conduct model training and testing.

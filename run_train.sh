@@ -9,7 +9,7 @@ data_dir="/mnt/2T/LJ/Dongyang/train_npz"
 seed=1234
 deterministic=1
 batch_size=24
-pretrain_ckpt_path="../../pretrained_ckpt/new_cswin_tiny_224.pth"
+pretrain_ckpt_path="./pretrained_ckpt/new_cswin_tiny_224.pth"
 base_lr=0.05
 epochs=100
 
@@ -50,5 +50,3 @@ python train.py \
     --qk_scale "$qk_scale" \
     --mlp_ratio "$mlp_ratio" \
     --num_classes "$num_classes"
-
-sh ./run_test.sh
